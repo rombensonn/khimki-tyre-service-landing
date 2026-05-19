@@ -2,6 +2,8 @@
 
 import { CarFront, Droplets, Gauge, Wrench } from "lucide-react";
 
+import { withBasePath } from "@/lib/paths";
+
 const services = [
   {
     icon: Gauge,
@@ -81,7 +83,7 @@ export default function Services() {
                   alt={service.alt}
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.035]"
                   loading="lazy"
-                  src={service.image}
+                  src={withBasePath(service.image)}
                 />
                 <div className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-[#171b24]/86 p-4 text-[#fffaf2] backdrop-blur">
                   <span className="text-xs font-black uppercase tracking-[0.14em] text-[#f5a524]">
